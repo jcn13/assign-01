@@ -2,33 +2,54 @@ const http = require("http")
 const fs = require('fs')
 const path = require('path')
 
-let templates = {
-  name: "",
-  content: ""
-}
-
-let posts = {
-  name: "",
-  content: ""
-}
-
-function getContent(type, folder){
-
-  fs.readdir('./'+ folder, function(err, folderFiles){
-    if(err){throw err}
-    folderFiles.forEach(function(fileName){
-      let file = path.join(__dirname, folder, fileName)    
-      fs.readFile(file, "UTF-8", function(err, contents){
-        type.name = (fileName)
-        type.content = (contents)
-        console.log(type)
+fs.readdir('./posts', function(err, files){
+  if(err){throw err}
+  let fn = './build/index.html'     
+  fs.readFile('./templates/index_h.html', "UTF-8", function(err, indexH){
+    let html = indexH
+    html += "<ul>\n"
+    files.forEach(function(fileName){ 
+      html += "<li><a href=\"/"+ fileName.split(".txt") + '.html' +"\">"+fileName.split('.txt')+"</a></li>\n"
+    })
+    fs.readFile('./templates/index_f.html', "UTF-8", function(err, indexF){
+      html += "</ul>\n"
+      html += indexF        
+      fs.writeFile(fn, html.trim(), function(err){
+        console.log("File created")
       })
     })
   })
-}
+})
 
-getContent(templates, 'templates')
-getContent(posts, 'posts')
+fs.readdir('./posts', function(err, files){
+  if(err){throw err}
+  files.forEach(function(fileName){
+    let file = path.join(__dirname, 'posts', fileName)
+    fs.readFile(file, "UTF-8", function(err, content){
+      let fn = './build/'+ fileName.split(".txt") + '.html'
+      fs.readFile('./templates/post_h.html', "UTF-8", function(err, postH){
+        let html = postH + content
+        fs.readFile('./templates/post_f.html', "UTF-8", function(err, postF){
+          html += postF
+          fs.writeFile(fn, html.trim(), function(err){
+            console.log("File created")
+          })
+        }) 
+      })
+    })
+  })
+})
+  
+  // for(i = 0; i < posts.length; i++){
+  //   let fn = './build/'+ posts[i].name.split(".") + '.html'
+  //   let hmtl = templates[3].content + posts.content + templates[2].content 
+  //   fs.writeFile(fn, html.trim(), function(err){
+  //     console.log("File created")
+  //   })
+  // }
+// } 
+// getContent(templates, 'templates')
+// getContent(posts, 'posts')
 
 
 
