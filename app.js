@@ -8,8 +8,10 @@ fs.readdir('./posts', function(err, files){
   fs.readFile('./templates/index_h.html', "UTF-8", function(err, indexH){
     let html = indexH
     html += "<ul>\n"
-    files.forEach(function(fileName){ 
-      html += "<li><a href=\"/"+ fileName.split(".txt") + '.html' +"\">"+fileName.split('.txt')+"</a></li>\n"
+    files.forEach(function(fileName){
+      let name = fileName.toString().split(".txt")
+      let n = name[0].toString().split("_") 
+      html += "<li><a href=\"/"+ name[0] + '.html' +"\">"+ capFirstLetter(n[0]) +" "+ capFirstLetter(n[1]) +"</a></li>\n"
     })
     fs.readFile('./templates/index_f.html', "UTF-8", function(err, indexF){
       html += "</ul>\n"
@@ -21,19 +23,31 @@ fs.readdir('./posts', function(err, files){
   })
 })
 
+function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 fs.readdir('./posts', function(err, files){
   if(err){throw err}
   files.forEach(function(fileName){
     let file = path.join(__dirname, 'posts', fileName)
     fs.readFile(file, "UTF-8", function(err, content){
-      let fn = './build/'+ fileName.split(".txt") + '.html'
+      let name = fileName.toString().split(".txt")
+      let fn = './build/'+ name[0] + '.html'
       fs.readFile('./templates/post_h.html', "UTF-8", function(err, postH){
         let html = postH + content
         fs.readFile('./templates/post_f.html', "UTF-8", function(err, postF){
           html += postF
-          fs.writeFile(fn, html.trim(), function(err){
-            console.log("File created")
-          })
+          fs.stat(fn, function(err, stat) {
+            if(err == null) {
+                console.log('File exists');
+            } else if(err.code == 'ENOENT') {
+                fs.writeFile(fn, html.trim(), function(err){
+                  console.log("File created")
+                })
+            } else {
+                console.log('Some other error: ', err.code);
+            }
+          })               
         }) 
       })
     })
