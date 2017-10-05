@@ -39,19 +39,6 @@ fs.readdir('./posts', function(err, files){
     })
   })
 })
-  
-  // for(i = 0; i < posts.length; i++){
-  //   let fn = './build/'+ posts[i].name.split(".") + '.html'
-  //   let hmtl = templates[3].content + posts.content + templates[2].content 
-  //   fs.writeFile(fn, html.trim(), function(err){
-  //     console.log("File created")
-  //   })
-  // }
-// } 
-// getContent(templates, 'templates')
-// getContent(posts, 'posts')
-
-
 
 http.createServer(function(req,res) {
   console.log(`${req.method} request for ${req.url}`)
