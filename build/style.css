@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+
+html {
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+	padding: 1rem;
+	background: #f4f4f4;
+	display: block;
+}
+
+header {
+	background: url(imgs/forest_back.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	height: 600px;
+	text-align: center;
+	color: white;
+	border-bottom: 2px solid #c39f76;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	font-size: 5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    padding-top: 15rem;
+    margin: 0;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 900;
+	color: #3f3f3f;
+	text-transform: uppercase;
+	margin-bottom: .5rem;
+}
+
+p {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #8f8476;
+}
+
+.info_line{
+	font-size: .7rem;
+	font-weight: 400;
+	font-style: italic;
+	background: #f4f4f4;
+	color: #8f8476;
+	padding: .5rem;
+}
+
+.sports {
+	background-color: #e4985b;
+}
+
+.trip {
+	background-color: #f1bd3e;
+}
+
+.jobs {
+	background-color: #6c9abf;
+}
+
+.objects {
+	background-color: #92bd3e;
+}
+
+.category a {
+	padding: .5rem;
+	display: block;
+	text-align: center;
+	width: 20%;
+	font-size: .9rem;
+	font-weight: 400;
+	color: white;
+	text-transform: uppercase;
+	margin-top: -5px;
+}
+
+.category a:hover {
+	text-decoration: underline;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: -10px;
+}
+
+.post {
+	background: #fff;
+	padding: 1.5rem;
+	flex-grow: 1;
+	flex-basis: 23%;
+	margin: 10px;
+}
+
+.author a, .category_name a {
+	color: #5f5347;
+	border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #5f5347;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns a {
+    transition: box-shadow .5s linear;
+}
+
+.btns a:hover {
+	box-shadow: 0px 0px 8px #000;;
+}
+
+.more {
+	padding: .5rem 1.5rem;
+	background: #5f5347;
+}
+
+.share {
+	padding: .5rem 1.5rem;
+	background: #3f3f3f;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.pagination {
+	margin: 2rem 0;
+}
+
+.pagination ul {
+	list-style-type: none;
+	text-decoration: none;	
+	padding: 0;
+	margin: 0;
+	display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+	margin: 0 10px;
+}
+
+.pagination li a {
+	padding: .6rem 1rem;
+	color: #3f3f3f;
+	border: 1px solid #3f3f3f;
+	transition: background-color .5s linear, color .5s linear;
+}
+
+.pagination li a:hover {
+	color: white;
+	background-color: #3f3f3f;
+}
+
+.sign {
+	background: #3f3f3f;
+	border-top: 2px solid #c39f76;
+	padding: 1.5rem;
+}
+
+.sign p {
+	font-size: .7rem;
+	color: #c39f76;
+	text-align: center;
+}
+
+.post_inside {
+	background: #fff;
+	padding: 1.5rem;
+	flex-grow: 1;
+	flex-basis: 60%;
+	margin: 10px;
+}
+
+.gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.gallery img {
+	flex-basis: 23%;
+	flex-grow: 1;
+}
+
+.post_header {
+	background-attachment: fixed;
+	background-size: cover;
+	height: 600px;
+	text-align: center;
+	color: white;
+	border-bottom: 2px solid #c39f76;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sport{
+	background: url(imgs/sport.jpg);
+}
+.trip{
+	background: url(imgs/44.jpg);	
+}
+.objects{
+	background: url(imgs/bank.jpg);
+}
+.post_header h1 {
+	padding-top: 0;
+}
+
+.post_header .info_line {
+	width: 50%;
+}
+
+.post_header .category a {
+	width: 100%;
+}
+

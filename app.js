@@ -40,13 +40,11 @@ fs.readdir('./posts', function(err, files){
           fs.stat(fn, function(err, stat) {
             if(err == null) {
                 console.log('File exists');
-            } else if(err.code == 'ENOENT') {
-                fs.writeFile(fn, html.trim(), function(err){
-                  console.log("File created")
-                })
             } else {
-                console.log('Some other error: ', err.code);
-            }
+              fs.writeFile(fn, html.trim(), function(err){
+                console.log("File created")
+              })
+            } 
           })               
         }) 
       })

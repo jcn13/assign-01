@@ -1,1 +1,37 @@
-<h1>Post Two</h1>
+trip">
+		<div class="category">
+			<a href="#" class="sports">Trip</a>
+		</div>
+		<h1>Post Two</h1>
+		<div class="info_line">
+			<span class="date">3 February 2015</span>
+			<span>by</span>
+			<span class="author">
+				<a href="#" rel="author"> Anonymous</a>
+			</span>
+			<span>in</span>
+			<span class="category_name">
+				<a href="#" rel="category_name"> Trip</a>
+			</span>
+		</div>
+	</header>
+<main>
+	<div class="post_inside">	
+
+		
+		<div class="content">
+			<p>In hac habitasse platea dictumst. Ut semper mattis congue. Aenean eu tellus in enim dignissim laoreet eget vel dolor. Proin faucibus rutrum nunc quis iaculis. Cras sit amet nisl nisi. Mauris sed mauris imperdiet, finibus leo eget, fringilla dui. Pellentesque malesuada nibh ut ex pretium facilisis. Cras luctus a leo non varius. Nam egestas aliquet nisl. Duis bibendum odio in ipsum faucibus, interdum iaculis arcu sagittis. Quisque dignissim est id quam dictum dignissim.
+			</br></br>
+			Vivamus ullamcorper, justo in dictum ullamcorper, quam enim maximus sem, a sodales nisl est ac nisi. Duis tincidunt ipsum eget bibendum pellentesque. Mauris varius sagittis interdum. Cras rutrum arcu libero, nec faucibus augue ullamcorper at. Suspendisse potenti. Duis a ante pellentesque, suscipit massa sit amet, rutrum augue. Nunc id ipsum placerat, eleifend nulla eu, lacinia nisl. In vitae elit faucibus, mattis erat in, luctus est. Curabitur pretium id neque non molestie. Sed tempor rutrum mauris, vel facilisis libero ultricies vel. Nunc diam mauris, semper vitae justo et, imperdiet congue quam. Nunc elit metus, tempor quis ultricies nec, mollis vitae magna. Etiam commodo tortor sed risus bibendum, ac eleifend ante blandit. Etiam lobortis erat id dignissim interdum. Integer et vulputate felis.
+			</br></br>
+			Vestibulum bibendum erat et enim pellentesque, a auctor massa fermentum. Quisque et nisi ac nulla pellentesque sodales. Aenean ut augue magna. Vivamus odio turpis, ultricies mattis tortor ac, aliquam faucibus lacus. Cras vehicula massa eu euismod mollis. Cras vulputate lacus et lectus faucibus, et porta ex pulvinar. Curabitur fringilla ante quis nibh semper finibus. Nulla facilisi. Mauris nibh dui, faucibus vel turpis at, efficitur porttitor justo. Pellentesque sodales nunc quis justo tincidunt vestibulum. Aliquam tincidunt velit tempor porta pulvinar. Proin congue arcu sit amet libero cursus molestie. Quisque pellentesque turpis dui, eu condimentum augue blandit eu. Fusce sed est eget tortor luctus scelerisque eu at turpis. Nulla sit amet sodales risus.</p>
+		</div>
+
+		<div class="btns">
+			<a href="" class="more">MORE</a>
+			<a href="" class="share">SHARE</a>
+		</div>
+
+	</div>
+
+</main>
