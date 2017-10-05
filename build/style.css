@@ -216,12 +216,16 @@ img {
 }
 .sport{
 	background: url(imgs/sport.jpg);
+	background-attachment: fixed;
+	background-size: cover;
 }
 .trip{
 	background: url(imgs/44.jpg);	
 }
 .objects{
 	background: url(imgs/bank.jpg);
+	background-attachment: fixed;
+	background-size: cover;
 }
 .post_header h1 {
 	padding-top: 0;
