@@ -24,7 +24,7 @@ fs.readdir('./posts', function(err, files){
 })
 
 function capFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1)
 }
 fs.readdir('./posts', function(err, files){
   if(err){throw err}
@@ -39,7 +39,7 @@ fs.readdir('./posts', function(err, files){
           html += postF
           fs.stat(fn, function(err, stat) {
             if(err == null) {
-                console.log('File exists');
+                console.log('File exists')
             } else {
               fs.writeFile(fn, html.trim(), function(err){
                 console.log("File created")
